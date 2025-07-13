@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="B.C.S-III,Div-B,Practical batch No 1 ,Registration form">
+    <meta name="keywords" content="Registration Form">
+    <meta name="subject" content="Registration">
+    <meta name="copyright" content="HarshTech Organization">
+    <meta name="language" content="English">
+    <meta name="robots" content="index,follow">
+    <meta name="revised" content="sunday,july 13th,2025,8:45 pm">
+    <meta name="abstract" content="HarshTech  specializes in custom Software Development and Web design solutions.">
+    <meta name="topic" content="Software Development">
+    <meta name="summary" content="HarshTech Provides innovative technology solutions for business">
+    <meta name="classification" content="business">
+    <meta name="author" content="Harshad Teli">
+    <meta name="author" content="harshadteli697@gmail.com">
+    <meta name="designer" content="Harshad Teli">
+    <meta name="reply-to" content="harshtech417@gmail.com">
+    <meta name="owner" content="Harshad Teli">
+    <meta name="directory" content="Technology">
+    <meta name="pagename" content="Practical Batch No 1 Registration Form">
+    <meta name="category" content="Web Development">
+    <meta name="coverage" content="Worldwide">
+    <meta name="distribution" content="Global">
+  <title>Practical Batch-1 Registration</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background: #f0f8ff;
+      padding: 30px;
+      font-family: 'Segoe UI', sans-serif;
+    }
+    .container {
+      max-width: 500px;
+    }
+    .btn {
+      width: 100%;
+      margin-top: 15px;
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      font-weight: bold;
+    }
+    
+  </style>
+  <link rel="shortcut icon" href="./assets/IMAGES/form-icon.png" type="image/x-icon">
+</head>
+<body>
+  <div class="container shadow p-4 rounded bg-white">
+     <center><img src="./assets/IMAGES/nck.jpeg" height="100px" width="auto"></center>
+    <div class="container">
+        <center>
+            <h1><small>The New College Kolhapur</small></h1>
+        </center>
+        <h1 class="text-center mb-2" id="adminTrigger"><small>🎓 For Practical Batch No 1</small></h1><br>
+       
+    <h2>B.C.S-III Div-B [2025-26]</h2>
+    <button id="registerBtn" class="btn btn-primary">Register</button>
+    <button id="whatsappBtn" class="btn btn-success" disabled>Join WhatsApp Group</button><br><br>
+     <center><small> &copy; 2025 nckbcs3 | All rights reserved</small></center><br>
+  </div>
+
+  <script>
+    // Enable WhatsApp button if form was filled
+    window.onload = function() {
+      if (sessionStorage.getItem("formFilled") === "true") {
+        document.getElementById("whatsappBtn").disabled = false;
+      }
+    };
+
+    // Register button logic
+    document.getElementById("registerBtn").addEventListener("click", function () {
+      sessionStorage.setItem("formFilled", "true");
+      window.location.href = "form.html";
+    });
+
+    // WhatsApp button logic
+    document.getElementById("whatsappBtn").addEventListener("click", function () {
+      if (this.disabled) {
+        alert("Please fill up the registration form first.");
+      } else {
+        window.open("https://chat.whatsapp.com/DUO9RTWRbDd0PAUfE30Ohx?mode=ac_t", "_blank");
+      }
+    });
+  </script>
+  <script src="./assets/JS/prevent.js"></script>
+</body>
+</html>
